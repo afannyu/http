@@ -10,7 +10,7 @@ while True:
     conn,client_address = sock.accept()
     try:
         data = conn.recv(4096)
-        response = 'HTTP/1.1 200 OK\r\nContent-Disposition: attachment; filename=“aaa.jpg”\r\nContent-Length: 10\r\n\r\nHelloWorld'
+        response = 'HTTP/1.1 200 OK\r\nContent-Disposition: attachment; filename="aaa.jpg"\r\nContent-Length: 10\r\n\r\nHelloWorld'
         conn.send(response.encode())
     finally:
         conn.close()
